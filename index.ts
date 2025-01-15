@@ -1,4 +1,8 @@
+function sum(fn: () => void) {
+  setTimeout(fn, 5000);
+}
 
-function sum( (fn) => {
-    setInterval( fn, 1000);
-} )
+function fn() {
+  console.log("Hello, World");
+}
+sum(fn);

@@ -1,4 +1,8 @@
 "use strict";
-let x = 1;
-x = "Aman";
-console.log(x);
+function sum(fn) {
+    setTimeout(fn, 5000);
+}
+function fn() {
+    console.log("Hello, World");
+}
+sum(fn);
