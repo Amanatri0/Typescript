@@ -1,8 +1,8 @@
 "use strict";
-function sum(fn) {
-    setTimeout(fn, 5000);
+function delayedCall(anotherFn) {
+    setTimeout(() => anotherFn("Aman"), 2000);
 }
-function fn() {
-    console.log("Hello, World");
+function greet(name) {
+    console.log(`Hello ${name}`);
 }
-sum(fn);
+delayedCall(greet);

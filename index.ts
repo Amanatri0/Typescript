@@ -1,8 +1,9 @@
-function sum(fn: () => void) {
-  setTimeout(fn, 5000);
+function delayedCall(anotherFn: (a: string) => void) {
+  setTimeout(() => anotherFn("Aman"), 2000);
 }
 
-function fn() {
-  console.log("Hello, World");
+function greet(name: string): void {
+  console.log(`Hello ${name}`);
 }
-sum(fn);
+
+delayedCall(greet);
